@@ -12,31 +12,31 @@ import { useState } from "react";
 const firaSans = localFont({
   src: [
     {
-      path: "../app/fonts/FiraSansExtraCondensed-black.ttf",
+      path: "../app/fonts/FiraSansExtraCondensed-Black.ttf",
       weight: "900",
     },
     {
-      path: "../app/fonts/FiraSansExtraCondensed-bold.ttf",
+      path: "../app/fonts/FiraSansExtraCondensed-Bold.ttf",
       weight: "700",
     },
     {
-      path: "../app/fonts/FiraSansExtraCondensed-medium.ttf",
+      path: "../app/fonts/FiraSansExtraCondensed-Medium.ttf",
       weight: "500",
     },
     {
-      path: "../app/fonts/FiraSansExtraCondensed-regular.ttf",
+      path: "../app/fonts/FiraSansExtraCondensed-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../app/fonts/FiraSansExtraCondensed-light.ttf",
+      path: "../app/fonts/FiraSansExtraCondensed-Light.ttf",
       weight: "300",
     },
     {
-      path: "../app/fonts/FiraSansExtraCondensed-extralight.ttf",
+      path: "../app/fonts/FiraSansExtraCondensed-ExtraLight.ttf",
       weight: "200",
     },
     {
-      path: "../app/fonts/FiraSansExtraCondensed-thin.ttf",
+      path: "../app/fonts/FiraSansExtraCondensed-Thin.ttf",
       weight: "100",
     },
   ],
