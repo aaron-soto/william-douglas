@@ -17,7 +17,7 @@ export default function Home() {
           <Link
             href="/case-study"
             className={cn(
-              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              "uppercase flex py-2 opacity-0 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
               `[--slidein-delay:100ms]`
             )}
           >
@@ -26,7 +26,7 @@ export default function Home() {
           <Link
             href="/obc"
             className={cn(
-              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              "uppercase flex py-2 opacity-0 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
               `[--slidein-delay:200ms]`
             )}
           >
@@ -35,7 +35,7 @@ export default function Home() {
           <Link
             href="/acnd"
             className={cn(
-              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              "uppercase flex py-2 opacity-0 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
               `[--slidein-delay:300ms]`
             )}
           >
@@ -44,7 +44,7 @@ export default function Home() {
           <Link
             href="/art"
             className={cn(
-              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              "uppercase flex py-2 opacity-0 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
               `[--slidein-delay:400ms]`
             )}
           >
@@ -53,7 +53,7 @@ export default function Home() {
           <Link
             href="/wdc-productions"
             className={cn(
-              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              "uppercase flex py-2 opacity-0 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
               `[--slidein-delay:500ms]`
             )}
           >
@@ -62,7 +62,7 @@ export default function Home() {
           <Link
             href="/design"
             className={cn(
-              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              "uppercase flex py-2 opacity-0 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
               `[--slidein-delay:600ms]`
             )}
           >
