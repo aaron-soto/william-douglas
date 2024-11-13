@@ -15,6 +15,26 @@ const config: Config = {
         padding: "1rem",
       },
       keyframes: {
+        stretchin: {
+          "0%": {
+            transform: "scaleX(0)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scaleX(1)",
+            opacity: "1",
+          },
+        },
+        scalein: {
+          from: {
+            transform: "scale(0)",
+            opacity: "0",
+          },
+          to: {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+        },
         slidein: {
           from: {
             opacity: "0",
@@ -43,7 +63,10 @@ const config: Config = {
         },
       },
       animation: {
-        slidein: "slidein 1s ease var(--slidein-delay, 0) forwards",
+        slidein: "slidein .6s var(--slidein-delay, 0) forwards",
+        stretchin:
+          "stretchin var(--stretchin-duration) ease-in-out var(--stretchin-delay, 0) forwards",
+        scalein: "scalein 0.3s ease-in-out var(--scalein-delay, 0) forwards",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
