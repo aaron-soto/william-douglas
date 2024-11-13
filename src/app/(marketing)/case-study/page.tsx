@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { PageHeader } from "@/app/(marketing)/(components)/page-header";
+
+export const metadata: Metadata = {
+  title: "Case Study",
+  description: "About Will's journey to start Case Study Coffee Lounge.",
+};
 
 export default function Page() {
   return (

@@ -1,19 +1,11 @@
 import "../globals.css";
 
 import type { Metadata } from "next";
+import { MobileNav } from "@/components/mobile-nav";
 import { Navbar } from "@/components/navbar";
+import { SideNav } from "@/components/side-nav";
+import { SocialButtons } from "@/app/(marketing)/social-buttons";
 import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "../fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "50 100 900",
-});
-const geistMono = localFont({
-  src: "../fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -31,11 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen relative overflow-hidden`}
-      >
-        <Navbar />
+      <body className={`antialiased relative overflow-hidden`}>
+        <MobileNav />
+        <div className="hidden md:block">
+          <SideNav />
+        </div>
         {children}
+        <SocialButtons />
       </body>
     </html>
   );

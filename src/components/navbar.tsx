@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { useScroll } from "framer-motion";
+
+// import Image from "next/image";
+// import Link from "next/link";
 
 export const Navbar = () => {
   const pathName = usePathname();
@@ -30,31 +32,30 @@ export const Navbar = () => {
       )}
     >
       <div className="container mx-auto flex justify-between items-center h-full">
-        <Link href="/" className="flex items-center gap-4">
-          <img src="/images/colored-logo.svg" alt="logo" className="h-8 w-8" />
+        {/* <Link href="/" className="flex items-center gap-4">
+          <Image
+            src="/images/colored-logo.svg"
+            alt="logo"
+            width={50}
+            height={50}
+          />
           <h1 className="text-2xl font-thin font-sans hidden md:block">
             William Douglas Co.
           </h1>
-        </Link>
+        </Link> */}
         {!isBaseUrl && (
           <div className="flex items-center gap-4">
             <Button
               className="text-base hover px-2 text-white hover:text-primary animate-scalein opacity-0 scale-0 [--scalein-delay:100ms]"
               variant="link"
             >
-              About
+              Contact
             </Button>
             <Button
               className="text-base hover px-2 text-white hover:text-primary animate-scalein opacity-0 scale-0 [--scalein-delay:200ms]"
               variant="link"
             >
               Consulting
-            </Button>
-            <Button
-              className="text-base hover px-2 text-white hover:text-primary animate-scalein opacity-0 scale-0 [--scalein-delay:300ms]"
-              variant="link"
-            >
-              ACND
             </Button>
           </div>
         )}

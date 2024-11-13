@@ -1,4 +1,9 @@
+import { Metadata } from "next";
 import { PageHeader } from "@/app/(marketing)/(components)/page-header";
+
+export const metadata: Metadata = {
+  title: "Design",
+};
 
 export default function Page() {
   return (
