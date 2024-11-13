@@ -5,15 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const LINKS = [
-  { href: "/case-study", label: "Case Study" },
-  { href: "/obc", label: "OBC" },
-  { href: "/acnd", label: "ACND" },
-  { href: "/art", label: "Art" },
-  { href: "/wdc-productions", label: "WDC Productions" },
-  { href: "/design", label: "Design" },
-];
-
 export default function Home() {
   return (
     <div className="w-screen h-dvh relative">
@@ -23,18 +14,60 @@ export default function Home() {
         </h1>
 
         <div className="text-white font-thin font-sans text-3xl flex flex-col md:flex-row gap-x-6 mt-8 w-full px-4 justify-center">
-          {LINKS.map(({ href, label }, index) => (
-            <Link
-              key={href}
-              href={href}
-              className={cn(
-                "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein opacity-0 scale-0",
-                `[--slidein-delay:${100 + 50 * index}ms]`
-              )}
-            >
-              {label}
-            </Link>
-          ))}
+          <Link
+            href="/case-study"
+            className={cn(
+              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              `[--slidein-delay:100ms]`
+            )}
+          >
+            Case Study
+          </Link>
+          <Link
+            href="/obc"
+            className={cn(
+              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              `[--slidein-delay:200ms]`
+            )}
+          >
+            OBC
+          </Link>
+          <Link
+            href="/acnd"
+            className={cn(
+              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              `[--slidein-delay:300ms]`
+            )}
+          >
+            ACND
+          </Link>
+          <Link
+            href="/art"
+            className={cn(
+              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              `[--slidein-delay:400ms]`
+            )}
+          >
+            Art
+          </Link>
+          <Link
+            href="/wdc-productions"
+            className={cn(
+              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              `[--slidein-delay:500ms]`
+            )}
+          >
+            WDC Productions
+          </Link>
+          <Link
+            href="/design"
+            className={cn(
+              "uppercase flex py-2 hover:text-red-700 cursor-pointer items-center justify-center animate-slidein",
+              `[--slidein-delay:600ms]`
+            )}
+          >
+            Design
+          </Link>
         </div>
       </div>
       <Image
