@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { PageHeader } from "@/app/(marketing)/(components)/page-header";
 import { cn } from "@/lib/utils";
@@ -40,7 +41,10 @@ const firaSans = localFont({
 export default function Page() {
   return (
     <div className="py-6 px-4 text-white flex flex-col">
-      <h2 className={cn(firaSans.className, "font-medium text-xl uppercase")}>
+      <h1 className="text-3xl text-white">Contact</h1>
+      <h2
+        className={cn(firaSans.className, "font-medium text-xl uppercase mt-6")}
+      >
         William Douglas
       </h2>
       <Link href="/" className="text-red-700">
@@ -59,7 +63,8 @@ export default function Page() {
           type="text"
           id="name"
           name="name"
-          className="w-full border-b border-white bg-transparent text-white"
+          placeholder="Your Name..."
+          className="w-full border-b border-white bg-transparent text-white rounded-none px-4 py-2"
         />
         <label htmlFor="email" className="block mt-4">
           Email
@@ -68,7 +73,8 @@ export default function Page() {
           type="email"
           id="email"
           name="email"
-          className="w-full border-b border-white bg-transparent text-white"
+          placeholder="Your Email..."
+          className="w-full border-b border-white bg-transparent text-white rounded-none px-4 py-2"
         />
         <label htmlFor="message" className="block mt-4">
           Message
@@ -76,14 +82,16 @@ export default function Page() {
         <textarea
           id="message"
           name="message"
-          className="w-full border-b border-white bg-transparent text-white"
+          placeholder="Your Message..."
+          className="w-full border-b border-white bg-transparent text-white rounded-none px-4 py-2"
         />
-        <button
+        <Button
           type="submit"
-          className="mt-4 bg-red-700 text-white py-2 px-4 rounded-none w-[200px]"
+          size="lg"
+          className="mt-4 bg-red-700 text-white py-2 px-4 rounded-none w-full md:w-[200px]"
         >
           Send
-        </button>
+        </Button>
       </form>
     </div>
   );

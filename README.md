@@ -3,3 +3,5 @@
 [We are makers post](https://www.wearemakers.info/p/william-douglas-co)
 
 Instagram: https://www.instagram.com/williamdouglas.co/?hl=en
+
+TODO: add watermark to pages

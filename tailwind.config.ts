@@ -14,6 +14,9 @@ const config: Config = {
         center: true,
         padding: "1rem",
       },
+      fontFamily: {
+        sans: ["var(--font-montserrat)", "system-ui", "sans-serif"],
+      },
       keyframes: {
         stretchin: {
           "0%": {

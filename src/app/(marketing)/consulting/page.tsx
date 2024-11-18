@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { Metadata } from "next";
-import { PageHeader } from "@/app/(marketing)/(components)/page-header";
 
 export const metadata: Metadata = {
   title: "Case Study",
@@ -8,10 +8,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="bg-black pt-[49px] h-screen w-screen">
-      <div className="container pt-6">
-        <PageHeader title="Case Study" />
-      </div>
+    <div className="py-6 px-4 text-white">
+      <h1 className="font-sans uppercase text-3xl">Case Study Coffee Lounge</h1>
+      <p className="text-muted-foreground mt-3"></p>
     </div>
   );
 }

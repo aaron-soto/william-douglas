@@ -1,6 +1,7 @@
 "use client";
 
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
+import { NAV_LINKS, NavLink, SOCIALS } from "@/data/nav-links";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -54,11 +55,13 @@ const SectionHeading = ({
   children: React.ReactNode;
   href?: string;
 }) => {
-  if (href == null) {
+  const pathname = usePathname();
+
+  if (href == "") {
     return (
       <h2
         className={cn(
-          "uppercase pt-2 flex items-center cursor-pointer w-fit text-2xl font-[500]",
+          "uppercase pt-2 flex items-center w-fit text-2xl font-[500]",
           firaSans.className
         )}
       >
@@ -72,7 +75,8 @@ const SectionHeading = ({
       href={href || "/"}
       className={cn(
         "uppercase pt-2 flex items-center hover:text-[#c12535] cursor-pointer w-fit text-2xl font-[500]",
-        firaSans.className
+        firaSans.className,
+        pathname === href && "text-[#c12535]"
       )}
     >
       {children}
@@ -150,53 +154,52 @@ export const Navbar = () => {
               isOpen || "hidden md:block"
             )}
           >
-            <SectionHeading>Studio</SectionHeading>
-            <Item href="/art-for-sale" label="Art for sale" />
-            <Item label="Portfolio" />
-
-            <SectionHeading href="/work">Work</SectionHeading>
-            <Item
-              href="/work/case-study-coffee-lounge"
-              label="Case Study Coffee Lounge"
-            />
-            <Item label="ACND Exhibition" />
-            <Item label="Our Block Co" />
-
-            <SectionHeading>Productions</SectionHeading>
-            <Item href="/wdc-productions" label="WDC Productions" />
-            <Item
-              href="/william-douglas-co-youtube"
-              label="William Douglas Co. Youtube"
-            />
-
-            <SectionHeading>Press/Awards</SectionHeading>
-            <Item label="Best of the Valley 2024" />
-            <Item label="Fine Woodworking Magazine 2023" />
-
-            <SectionHeading href="/contact">Contact</SectionHeading>
-            <Item label="Consulting" />
+            {
+              // Loop through each section in the nav links
+              NAV_LINKS.map((section) => (
+                <div key={section.label}>
+                  <SectionHeading href={section.href ? section.href : ""}>
+                    {section.label}
+                  </SectionHeading>
+                  {section?.links?.map((link: NavLink) => (
+                    <Item
+                      key={link.label}
+                      href={link.href ? link.href : ""}
+                      label={link.label}
+                    />
+                  ))}
+                </div>
+              ))
+            }
             <div className="flex mt-2">
-              <Button
-                variant="ghost"
-                className="hover:bg-transparent text-white hover:text-[#c12535]"
-              >
-                <FaFacebook className="!text-4xl" />
-              </Button>
-              <Button
-                variant="ghost"
-                className="hover:bg-transparent text-white hover:text-[#c12535]"
-              >
-                <FaInstagram className="!text-4xl" />
-              </Button>
-              <Button
-                variant="ghost"
-                className="hover:bg-transparent text-white hover:text-[#c12535]"
-              >
-                <FaYoutube className="!text-4xl" />
-              </Button>
+              {
+                // Loop through each social media link
+                SOCIALS.map((social) => (
+                  <Button
+                    asChild
+                    key={social.label}
+                    variant="ghost"
+                    className="hover:bg-transparent text-white hover:text-[#c12535]"
+                  >
+                    <Link href={social.href} target="_blank">
+                      {social.icon}
+                    </Link>
+                  </Button>
+                ))
+              }
             </div>
           </div>
         </AnimateChangeInHeight>
+        {/* <span className="text-sm hidden md:block text-[#282828] text-center mt-auto mb-4">
+          Proudly made by{" "}
+          <Link
+            className="underline"
+            target="_blank"
+            href="https://ayezeewebdesigns.com"
+          >
+            AyeZee Web Designs
+          </Link>
+        </span> */}
       </div>
     </nav>
   );
