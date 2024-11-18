@@ -28,14 +28,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-{
-  /* <body className={`antialiased relative overflow-hidden`}>
-        <MobileNav />
-        <div className="hidden md:block">
-          <SideNav />
-        </div>
-        {children}
-        <SocialButtons />
-      </body> */
-}
