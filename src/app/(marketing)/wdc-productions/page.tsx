@@ -19,7 +19,7 @@ export default function Page() {
           similique iusto quasi, quidem quae illo modi debitis et, veniam minus?
         </p>
 
-        <div className="grid grid-cols-2 gap-8 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
           <div className="h-[300px] relative col-span-1 overflow-hidden flex items-center justify-center">
             <Image
               src="/images/garage-will-shooting.jpg"
