@@ -15,13 +15,13 @@ export default function Page() {
         to showcase their finest works. This event celebrates the enduring
         spirit of craftsmanship, blending tradition with innovation. Hosted at
         the iconic Case Study Coffee Lounge, visitors can experience stunning
-        displays of skill and artistry in a setting that embodies William's
+        displays of skill and artistry in a setting that embodies William&apos;s
         passion for design and community.
       </p>
       <p className="text-muted-foreground mt-3">
         ACND aims to inspire a deeper appreciation for handmade excellence,
         fostering connections between creators and admirers. It&apos;s more than
-        an exhibition—it's a tribute to the legacy of craftsmanship that
+        an exhibition—it&apos;s a tribute to the legacy of craftsmanship that
         transcends generations.
       </p>
 
