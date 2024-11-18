@@ -54,6 +54,19 @@ const SectionHeading = ({
   children: React.ReactNode;
   href?: string;
 }) => {
+  if (href == null) {
+    return (
+      <h2
+        className={cn(
+          "uppercase pt-2 flex items-center cursor-pointer w-fit text-2xl font-[500]",
+          firaSans.className
+        )}
+      >
+        {children}
+      </h2>
+    );
+  }
+
   return (
     <Link
       href={href || "/"}
@@ -137,8 +150,8 @@ export const Navbar = () => {
               isOpen || "hidden md:block"
             )}
           >
-            <SectionHeading href="/studio/art-for-sale">Studio</SectionHeading>
-            <Item href="/studio/art-for-sale" label="Art for sale" />
+            <SectionHeading>Studio</SectionHeading>
+            <Item href="/art-for-sale" label="Art for sale" />
             <Item label="Portfolio" />
 
             <SectionHeading href="/work">Work</SectionHeading>
@@ -149,11 +162,14 @@ export const Navbar = () => {
             <Item label="ACND Exhibition" />
             <Item label="Our Block Co" />
 
-            <SectionHeading href="/productions">Productions</SectionHeading>
-            <Item label="WDC Productions" />
-            <Item label="William Douglas Co. Youtube" />
+            <SectionHeading>Productions</SectionHeading>
+            <Item href="/wdc-productions" label="WDC Productions" />
+            <Item
+              href="/william-douglas-co-youtube"
+              label="William Douglas Co. Youtube"
+            />
 
-            <SectionHeading href="/awards">Press/Awards</SectionHeading>
+            <SectionHeading>Press/Awards</SectionHeading>
             <Item label="Best of the Valley 2024" />
             <Item label="Fine Woodworking Magazine 2023" />
 
