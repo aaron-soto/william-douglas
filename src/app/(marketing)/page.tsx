@@ -1,18 +1,17 @@
 import Image from "next/image";
-import { MobileNav } from "@/components/mobile-nav";
-import { SideNav } from "@/components/side-nav";
-import { SocialButtons } from "@/app/(marketing)/social-buttons";
 
 export default function Home() {
   return (
-    <div className="w-screen h-dvh relative">
-      <div className="absolute inset-0 bg-black bg-opacity-50 md:bg-opacity-80 z-[1000]"></div>
-      <Image
-        src="/images/william-hero.jpg"
-        alt="hero"
-        fill
-        className="z-[100] object-cover"
-      />
+    <div className="py-6 md:py-4 px-4 w-full h-screen">
+      <div className="w-full h-[700px] md:h-full relative rounded-[35px] md:rounded-[15px] overflow-hidden">
+        <Image
+          src="/images/william-hero.jpg"
+          alt="william"
+          fill
+          className="absolute inset-0 object-cover "
+        />
+        <div className="bg-black absolute inset-0 bg-opacity-40"></div>
+      </div>
     </div>
   );
 }

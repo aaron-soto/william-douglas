@@ -1,11 +1,7 @@
 import "../globals.css";
 
 import type { Metadata } from "next";
-import { MobileNav } from "@/components/mobile-nav";
 import { Navbar } from "@/components/navbar";
-import { SideNav } from "@/components/side-nav";
-import { SocialButtons } from "@/app/(marketing)/social-buttons";
-import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: {
@@ -23,14 +19,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased relative overflow-hidden`}>
+      <body
+        className={`antialiased bg-black text-white relative flex flex-col md:flex-row`}
+      >
+        <Navbar />
+        {children}
+      </body>
+    </html>
+  );
+}
+
+{
+  /* <body className={`antialiased relative overflow-hidden`}>
         <MobileNav />
         <div className="hidden md:block">
           <SideNav />
         </div>
         {children}
         <SocialButtons />
-      </body>
-    </html>
-  );
+      </body> */
 }

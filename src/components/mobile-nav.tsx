@@ -72,15 +72,6 @@ export const MobileNav = () => {
             <RiMenu3Fill className="text-3xl" />
           </motion.div>
         )}
-        <Link
-          href="/"
-          className={cn(
-            "text-white inline-block text-4xl pl-4 pt-8 font-normal font-sans fixed top-0 left-0 uppercase",
-            firaSans.className
-          )}
-        >
-          William <br></br> Douglas
-        </Link>
       </div>
       {isOpen && <SideNav isOpen={isOpen} />}
     </>

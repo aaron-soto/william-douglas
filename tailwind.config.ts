@@ -27,7 +27,7 @@ const config: Config = {
         },
         scalein: {
           from: {
-            transform: "scale(0)",
+            transform: "scale(.9)",
             opacity: "0",
           },
           to: {
@@ -35,15 +35,9 @@ const config: Config = {
             opacity: "1",
           },
         },
-        slidein: {
-          from: {
-            opacity: "0",
-            transform: "translateY(-10px)",
-          },
-          to: {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
+        slideIn: {
+          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
         },
         "accordion-down": {
           from: {
@@ -63,10 +57,10 @@ const config: Config = {
         },
       },
       animation: {
-        slidein: "slidein .6s var(--slidein-delay, 0) forwards",
+        slideIn: "slideIn 0.3s ease-out",
         stretchin:
           "stretchin var(--stretchin-duration) ease-in-out var(--stretchin-delay, 0) forwards",
-        scalein: "scalein 0.3s ease-in-out var(--scalein-delay, 0) forwards",
+        scalein: "scalein 0.2s ease-out",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

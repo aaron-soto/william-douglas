@@ -1,11 +1,10 @@
 import { PageHeader } from "@/app/(marketing)/(components)/page-header";
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="py-6 px-4 text-white">
-      {/* <PageHeader title="Studio" /> */}
-      <h1 className="text-white">Testing</h1>
-      <p className="mb-4">
+      <PageHeader title="Studio" />
+      <p className="mb-4 mt-6">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
         consequuntur, repellendus minus numquam autem soluta in enim saepe
         sapiente quam labore ipsum impedit officia aliquid iste eum consequatur
