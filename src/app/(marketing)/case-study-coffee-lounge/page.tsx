@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,35 +12,23 @@ export default function Page() {
     <div className="py-6 px-4 text-white">
       <h1 className="font-sans uppercase text-3xl">Case Study Coffee Lounge</h1>
       <p className="text-muted-foreground mt-3">
-        William Douglas, a Phoenix native and accomplished furniture designer,
-        craftsman, and entrepreneur, established Case Study Coffee Lounge as an
-        extension of his woodworking enterprise. Initially, the space functioned
-        as a showroom where clients could experience his handcrafted furniture
-        firsthand, rather than viewing it online. This approach allowed visitors
-        to appreciate the quality and craftsmanship of his pieces in a tangible
-        setting.
+        Located in the heart of uptown Phoenix, AZ, Case Study Coffee Lounge is an award-winning coffee shop with a story as rich as its roasts. The lounge was born out of William Douglas’s pivot from woodworking to coffee after developing an allergy to wood.
       </p>
       <p className="text-muted-foreground mt-3">
-        Over time, the showroom attracted local community members who were not
-        only impressed by the furniture but also enjoyed the specialty coffee
-        offered during their visits. The positive response led to the
-        transformation of the showroom into a public coffee lounge, blending
-        Douglas&apos;s passion for woodworking with a welcoming café
-        environment.
+        William’s former woodshop was a one-of-a-kind space where clients enjoyed coffee while sitting on handcrafted WDC furniture. Beyond glass walls, they could watch master craftsmen at work, building heirloom-quality pieces. When William had to close the shop, he faced three years left on his lease, an espresso machine, and a few pieces of furniture.
       </p>
       <p className="text-muted-foreground mt-3">
-        This evolution was partly influenced by Douglas&apos;s personal health
-        challenges. After developing an allergy to wood, he had to reduce his
-        woodworking activities. This circumstance prompted him to focus more on
-        the coffee lounge, allowing him to continue sharing his craftsmanship
-        through the furniture displayed in the café while fostering community
-        engagement over quality coffee.
+        Determined to turn a setback into an opportunity, William transformed the woodshop into Case Study Coffee Lounge. His commitment to precision and craftsmanship now shines in every cup of coffee. William roasts the beans himself, ensuring exceptional quality.
       </p>
       <p className="text-muted-foreground mt-3">
-        Case Study Coffee Lounge now serves as a unique space where patrons can
-        enjoy specialty coffee amidst Douglas&apos;s custom furniture,
-        reflecting his dedication to craftsmanship and community connection.
+        Case Study Coffee Lounge is a haven for coffee lovers and students alike, offering a welcoming atmosphere, expertly brewed coffee, house-made syrups, a breakfast menu, and an in-house baking program. William dreams of expanding to a second location when the time is right.
       </p>
+
+      <div className="flex flex-col my-4">
+        <Link className="hover:text-red-700 underline text-white" href="https://casestudycoffeelounge.com">Visit the Case Study Coffee Lounge Website</Link>
+        <Link className="hover:text-red-700 underline text-white" href="https://instagram.com">Follow Case Study Coffee Lounge on Instagram</Link>
+      </div>
+
       <div className="w-full relative h-[400px] mt-6 overflow-hidden rounded-[12px]">
         <Image
           src="/images/case-study-coffee-lounge.jpeg"

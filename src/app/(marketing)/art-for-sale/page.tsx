@@ -12,11 +12,7 @@ export default function Page() {
   return (
     <div className="py-6 px-4 text-white">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ab
-        blanditiis non doloribus cupiditate esse officia eaque! Omnis explicabo
-        dolorum, temporibus molestias id quos reprehenderit officiis eaque
-        molestiae assumenda minima ipsam magnam fuga? Aut itaque consequuntur
-        dolore commodi error eius quod earum assumenda praesentium voluptatem?
+        These are current pieces in stock and available for purchase. Some of the pieces are created by W. Douglas, and some are from our art exhibition ACND.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
         {ART_FOR_SALE.map((art, idx) => {

@@ -10,7 +10,9 @@ export default function Page() {
   return (
     <div className="py-6 px-4 text-white">
       <h1 className="font-sans uppercase text-3xl">Portfolio</h1>
-      <p className="text-muted-foreground mt-3"></p>
+      <p className="text-muted-foreground mt-3">
+        Since 2012, William Douglas has been crafting unique pieces across a variety of mediums. This portfolio showcases his work over the years, including GFRC concrete, mold making, casting, metal fabrication, interior design, fine art, and heirloom-quality furniture with a focus on hardwoods.
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="relative h-[400px] mt-6 overflow-hidden">

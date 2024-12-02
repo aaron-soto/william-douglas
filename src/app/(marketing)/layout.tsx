@@ -39,7 +39,29 @@ export default function RootLayout({
         <Navbar />
         <div className="md:flex md:flex-col w-full overflow-x-hidden">
           {children}
-          {/* <span className="text-sm block md:hidden text-[#3e3e3e] text-center mt-auto mb-12 md:mb-4">
+
+        </div>
+      </body>
+    </html>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <span className="text-sm block md:hidden text-[#3e3e3e] text-center mt-auto mb-12 md:mb-4">
             Proudly made by{" "}
             <Link
               className="underline"
@@ -49,8 +71,3 @@ export default function RootLayout({
               AyeZee Web Designs
             </Link>
           </span> */}
-        </div>
-      </body>
-    </html>
-  );
-}
