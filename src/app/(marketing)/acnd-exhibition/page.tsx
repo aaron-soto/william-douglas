@@ -23,8 +23,6 @@ const IMAGES = [
   { src: "/images/acnd/acnd-1.webp" },
   { src: "/images/acnd/acnd-13.webp" },
   { src: "/images/acnd/acnd-14.webp" },
-  { src: "/images/acnd/acnd-15.webp" },
-  { src: "/images/acnd/acnd-16.webp" },
 ];
 
 export default function Page() {
