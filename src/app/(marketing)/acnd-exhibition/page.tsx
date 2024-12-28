@@ -46,12 +46,12 @@ export default function Page() {
         This event is not for hobbyists, as there are already many avenues for them to showcase their creations. Instead, ACND is dedicated to supporting emerging professionals who are serious about their craft and ready to grow their business.
       </p>
 
-      <div className="flex flex-col my-4">
+      <div className="flex flex-col my-4  gap-3 mb-6">
         <Link className="hover:text-red-700 underline text-white" href="/acnd-exhibition/apply">Apply for a booth at the next ACND Exhibition</Link>
         <Link className="hover:text-red-700 underline text-white" href="">Follow ACND on Instagram</Link>
       </div>
 
-      <h2 className="mt-6 text-xl font-sans uppercase">ACND 2024</h2>
+      <h2 className=" text-xl font-sans uppercase">ACND 2024</h2>
 
       <ImageSlider images={IMAGES} className="w-full mt-4" />
 

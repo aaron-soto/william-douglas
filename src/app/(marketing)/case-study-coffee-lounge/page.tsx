@@ -37,7 +37,7 @@ export default function Page() {
         Case Study Coffee Lounge is a haven for coffee lovers and students alike, offering a welcoming atmosphere, expertly brewed coffee, house-made syrups, a breakfast menu, and an in-house baking program. William dreams of expanding to a second location when the time is right.
       </p>
 
-      <div className="flex flex-col my-4">
+      <div className="flex flex-col my-4 gap-3 mb-6">
         <Link className="hover:text-red-700 underline text-white" href="https://casestudycoffeelounge.com" target="_blank">Visit the Case Study Coffee Lounge Website</Link>
         <Link className="hover:text-red-700 underline text-white" href="https://www.instagram.com/casestudycoffeelounge/" target="_blank">Follow Case Study Coffee Lounge on Instagram</Link>
       </div>

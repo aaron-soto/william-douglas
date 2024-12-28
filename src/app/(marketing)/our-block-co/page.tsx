@@ -23,7 +23,7 @@ export default function Page() {
         Each block and tile is still handmade, one at a time, in Phoenix, AZ. These pieces remain available for purchase, providing a blend of craftsmanship and architectural history.
       </p>
 
-      <div className="flex flex-col my-4">
+      <div className="flex flex-col my-4 gap-3 mb-6">
         <Link className="hover:text-red-700 underline text-white" href="https://ourblockco.com/" target="_blank">Visit Our Block Co Website</Link>
         <Link className="hover:text-red-700 underline text-white" href="https://www.instagram.com/ourblockco/" target="_blank">Follow Our Block Co on Instagram</Link>
       </div>
