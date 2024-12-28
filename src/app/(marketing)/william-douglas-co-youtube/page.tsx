@@ -39,46 +39,22 @@ export default function Page() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 my-8">
-        <div className="col-span-1 aspect-video self-stretch w-full relative">
-          <img
-            src="https://img.youtube.com/vi/vWmQhFbgDrU/hqdefault.jpg"
-            alt="Video placeholder"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <iframe
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/vWmQhFbgDrU"
-            frameBorder="0"
-            title="Product Overview Video"
-            aria-hidden="true"
-            loading="lazy"
-            style={{ visibility: 'hidden' }}
-            onLoad={(e) => {
-              (e.target as HTMLIFrameElement).style.visibility = 'visible';
-              ((e.target as HTMLIFrameElement).previousElementSibling as HTMLElement)!.style.display = 'none';
-            }}
-          />
-        </div>
-        <div className="col-span-1 aspect-video self-stretch w-full relative">
-          <img
-            src="https://img.youtube.com/vi/K9bVfkSgW0E/hqdefault.jpg"
-            alt="Video placeholder"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <iframe
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/K9bVfkSgW0E"
-            frameBorder="0"
-            title="Product Overview Video"
-            aria-hidden="true"
-            loading="lazy"
-            style={{ visibility: 'hidden' }}
-            onLoad={(e) => {
-              (e.target as HTMLIFrameElement).style.visibility = 'visible';
-              ((e.target as HTMLIFrameElement).previousElementSibling as HTMLElement)!.style.display = 'none';
-            }}
-          />
-        </div>
+        <iframe
+          className="col-span-1 aspect-video self-stretch w-full"
+          src="https://www.youtube.com/embed/vWmQhFbgDrU"
+          frameBorder="0"
+          loading="lazy"
+          title="My Best Build Ever Video"
+          aria-hidden="true"
+        />
+        <iframe
+          className="col-span-1 aspect-video self-stretch w-full"
+          src="https://www.youtube.com/embed/K9bVfkSgW0E"
+          frameBorder="0"
+          loading="lazy"
+          title="Sh*t People Say To Woodworkers Video"
+          aria-hidden="true"
+        />
       </div>
 
       <Button size="lg" className="mt-3 w-full md:w-fit mb-12" asChild>
