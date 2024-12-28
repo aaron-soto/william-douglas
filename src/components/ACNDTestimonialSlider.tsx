@@ -84,10 +84,10 @@ export const ACNDTestimonialSlider = ({ className }: { className?: string }) => 
         <SwiperSlide key={index}>
           <div className="flex pt-4 items-center justify-center h-full">
             <div className="py-6 text-neutral-400 bg-neutral-950 rounded-lg shadow-lg w-full">
-              <p className="text-lg max-w-2xl mx-auto font-medium mb-4">
+              <p className="text-lg mx-4 max-w-2xl mx-auto font-medium mb-4">
                 {testimonial.testimonial}
               </p>
-              <p className="text-md max-w-2xl mx-auto font-semibold text-white">
+              <p className="text-md mx-4 max-w-2xl mx-auto font-semibold text-white">
                 - {testimonial.name}
               </p>
             </div>
