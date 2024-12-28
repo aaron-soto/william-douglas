@@ -4,10 +4,10 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Image from "next/image";
-import { Pagination } from "swiper/modules";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
 
@@ -32,6 +32,10 @@ export const ImageSlider = ({ className, images }: { className?: string, images:
       pagination={{
         clickable: true,
       }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
       breakpoints={{
         "@0.00": {
           slidesPerView: 1,
@@ -46,17 +50,18 @@ export const ImageSlider = ({ className, images }: { className?: string, images:
           spaceBetween: 10,
         },
       }}
-      modules={[Pagination]}
-      className={cn("", className)}
-      style={
-        {
-          "--swiper-pagination-color": "#b91d2d",
-        } as React.CSSProperties
-      }
+      modules={[Pagination, Autoplay]}
+      className={cn("relative", className)}
+      style={{
+        "--swiper-pagination-bullet-border-radius": "0",
+        "--swiper-pagination-bullet-height": "4px",
+        "--swiper-pagination-bullet-width": "20px",
+        paddingBottom: "35px",
+      } as React.CSSProperties}
     >
       {images?.map((image, index) => (
         <SwiperSlide key={index}>
-          <div className="relative w-full h-[350px]">
+          <div className="relative w-full h-[300px]">
             <Image
               src={image.src}
               className="relative object-cover inset-0"
@@ -69,3 +74,4 @@ export const ImageSlider = ({ className, images }: { className?: string, images:
     </Swiper>
   );
 };
+

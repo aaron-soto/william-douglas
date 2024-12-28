@@ -78,3 +78,15 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgba(135, 135, 135, 0.3) transparent;
 } */
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+  opacity: 0.25 !important;
+}
+
+/* Active dot styling */
+.swiper-pagination-bullet-active {
+  background-color: #ec2c49 !important;
+  opacity: 1 !important;
+  transform: scale(1.2); /* Optional: Slightly enlarge active dot */
+}

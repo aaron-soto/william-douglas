@@ -1,3 +1,4 @@
+import { ACNDTestimonialSlider } from "@/components/ACNDTestimonialSlider";
 import Image from "next/image";
 import { ImageSlider } from "@/components/image-slider";
 import Link from "next/link";
@@ -8,18 +9,18 @@ export const metadata: Metadata = {
 };
 
 const IMAGES = [
-  { src: "/images/acnd/acnd-1.webp" },
+  { src: "/images/acnd/acnd-6.webp" },
   { src: "/images/acnd/acnd-2.webp" },
   { src: "/images/acnd/acnd-3.webp" },
   { src: "/images/acnd/acnd-4.webp" },
   { src: "/images/acnd/acnd-5.webp" },
-  { src: "/images/acnd/acnd-6.webp" },
   { src: "/images/acnd/acnd-7.webp" },
   { src: "/images/acnd/acnd-8.webp" },
   { src: "/images/acnd/acnd-9.webp" },
   { src: "/images/acnd/acnd-10.webp" },
   { src: "/images/acnd/acnd-11.webp" },
   { src: "/images/acnd/acnd-12.webp" },
+  { src: "/images/acnd/acnd-1.webp" },
   { src: "/images/acnd/acnd-13.webp" },
   { src: "/images/acnd/acnd-14.webp" },
   { src: "/images/acnd/acnd-15.webp" },
@@ -47,7 +48,7 @@ export default function Page() {
       </p>
 
       <div className="flex flex-col my-4  gap-3 mb-6">
-        <Link className="hover:text-red-700 underline text-white" href="/acnd-exhibition/apply">Apply for a booth at the next ACND Exhibition</Link>
+        <Link className="hover:text-red-700 underline text-white" href="/acnd-exhibition/apply">ACND SPRING 2025 Application</Link>
         <Link className="hover:text-red-700 underline text-white" href="https://www.instagram.com/acnd.exhibition/" target="_blank">Follow ACND on Instagram</Link>
       </div>
 
@@ -55,7 +56,9 @@ export default function Page() {
 
       <ImageSlider images={IMAGES} className="w-full mt-4" />
 
+      <h2 className="text-xl font-sans uppercase mt-12">What people say about ACND</h2>
 
+      <ACNDTestimonialSlider className="w-full" />
 
     </div>
   );
