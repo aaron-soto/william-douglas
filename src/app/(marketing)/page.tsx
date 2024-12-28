@@ -5,7 +5,7 @@ export default function Home() {
     <div className="p-4 w-full md:h-screen">
       <div className="w-full h-[700px] md:h-full relative rounded-[35px] md:rounded-[15px] overflow-hidden">
         <Image
-          src="/images/william-hero.jpg"
+          src="/images/william-hero-min.jpg"
           alt="william"
           fill
           className="absolute inset-0 object-cover "
