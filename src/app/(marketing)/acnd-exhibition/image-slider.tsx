@@ -11,12 +11,22 @@ import { Pagination } from "swiper/modules";
 import { cn } from "@/lib/utils";
 
 const IMAGES = [
-  { src: "/images/placeholder.webp" },
-  { src: "/images/placeholder.webp" },
-  { src: "/images/placeholder.webp" },
-  { src: "/images/placeholder.webp" },
-  { src: "/images/placeholder.webp" },
-  { src: "/images/placeholder.webp" },
+  { src: "/images/acnd/acnd-1.webp" },
+  { src: "/images/acnd/acnd-2.webp" },
+  { src: "/images/acnd/acnd-3.webp" },
+  { src: "/images/acnd/acnd-4.webp" },
+  { src: "/images/acnd/acnd-5.webp" },
+  { src: "/images/acnd/acnd-6.webp" },
+  { src: "/images/acnd/acnd-7.webp" },
+  { src: "/images/acnd/acnd-8.webp" },
+  { src: "/images/acnd/acnd-9.webp" },
+  { src: "/images/acnd/acnd-10.webp" },
+  { src: "/images/acnd/acnd-11.webp" },
+  { src: "/images/acnd/acnd-12.webp" },
+  { src: "/images/acnd/acnd-13.webp" },
+  { src: "/images/acnd/acnd-14.webp" },
+  { src: "/images/acnd/acnd-15.webp" },
+  { src: "/images/acnd/acnd-16.webp" },
 ];
 
 export const ImageSlider = ({ className }: { className?: string }) => {
