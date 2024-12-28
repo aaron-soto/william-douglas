@@ -1,4 +1,4 @@
-import { ImageSlider } from "@/app/(marketing)/acnd-exhibition/image-slider";
+import { ImageSlider } from "@/components/image-slider";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -24,8 +24,8 @@ export default function Page() {
       </p>
 
       <div className="flex flex-col my-4">
-        <Link className="hover:text-red-700 underline text-white" href="">Visit Our Block Co Website</Link>
-        <Link className="hover:text-red-700 underline text-white" href="">Follow Our Block Co on Instagram</Link>
+        <Link className="hover:text-red-700 underline text-white" href="https://ourblockco.com/" target="_blank">Visit Our Block Co Website</Link>
+        <Link className="hover:text-red-700 underline text-white" href="https://www.instagram.com/ourblockco/" target="_blank">Follow Our Block Co on Instagram</Link>
       </div>
     </div>
   );

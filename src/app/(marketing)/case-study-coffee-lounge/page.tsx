@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ImageSlider } from "@/components/image-slider";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -6,6 +7,18 @@ export const metadata: Metadata = {
   title: "Case Study",
   description: "About Will's journey to start Case Study Coffee Lounge.",
 };
+
+const IMAGES = [
+  { src: "/images/case-study/case-study-1.jpg" },
+  { src: "/images/case-study/case-study-2.jpg" },
+  { src: "/images/case-study/case-study-3.jpg" },
+  { src: "/images/case-study/case-study-4.jpg" },
+  { src: "/images/case-study/case-study-5.jpg" },
+  { src: "/images/case-study/case-study-6.jpg" },
+  { src: "/images/case-study/case-study-7.jpg" },
+  { src: "/images/case-study/case-study-8.jpg" },
+  { src: "/images/case-study/case-study-9.jpg" },
+]
 
 export default function Page() {
   return (
@@ -25,18 +38,11 @@ export default function Page() {
       </p>
 
       <div className="flex flex-col my-4">
-        <Link className="hover:text-red-700 underline text-white" href="https://casestudycoffeelounge.com">Visit the Case Study Coffee Lounge Website</Link>
-        <Link className="hover:text-red-700 underline text-white" href="https://instagram.com">Follow Case Study Coffee Lounge on Instagram</Link>
+        <Link className="hover:text-red-700 underline text-white" href="https://casestudycoffeelounge.com" target="_blank">Visit the Case Study Coffee Lounge Website</Link>
+        <Link className="hover:text-red-700 underline text-white" href="https://www.instagram.com/casestudycoffeelounge/" target="_blank">Follow Case Study Coffee Lounge on Instagram</Link>
       </div>
 
-      <div className="w-full relative h-[400px] mt-6 overflow-hidden rounded-[12px]">
-        <Image
-          src="/images/case-study-coffee-lounge.jpeg"
-          alt="case study"
-          fill
-          className="object-cover absolute inset-0 w-full hover:scale-110 transition-all duration-300"
-        />
-      </div>
+      <ImageSlider images={IMAGES} className="w-full mt-4" />
     </div>
   );
 }

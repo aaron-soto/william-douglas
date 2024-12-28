@@ -1,11 +1,30 @@
 import Image from "next/image";
-import { ImageSlider } from "@/app/(marketing)/acnd-exhibition/image-slider";
+import { ImageSlider } from "@/components/image-slider";
 import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ACND Exhibition",
 };
+
+const IMAGES = [
+  { src: "/images/acnd/acnd-1.webp" },
+  { src: "/images/acnd/acnd-2.webp" },
+  { src: "/images/acnd/acnd-3.webp" },
+  { src: "/images/acnd/acnd-4.webp" },
+  { src: "/images/acnd/acnd-5.webp" },
+  { src: "/images/acnd/acnd-6.webp" },
+  { src: "/images/acnd/acnd-7.webp" },
+  { src: "/images/acnd/acnd-8.webp" },
+  { src: "/images/acnd/acnd-9.webp" },
+  { src: "/images/acnd/acnd-10.webp" },
+  { src: "/images/acnd/acnd-11.webp" },
+  { src: "/images/acnd/acnd-12.webp" },
+  { src: "/images/acnd/acnd-13.webp" },
+  { src: "/images/acnd/acnd-14.webp" },
+  { src: "/images/acnd/acnd-15.webp" },
+  { src: "/images/acnd/acnd-16.webp" },
+];
 
 export default function Page() {
   return (
@@ -34,7 +53,7 @@ export default function Page() {
 
       <h2 className="mt-6 text-xl font-sans uppercase">ACND 2024</h2>
 
-      <ImageSlider className="w-full mt-4" />
+      <ImageSlider images={IMAGES} className="w-full mt-4" />
 
 
 
