@@ -48,7 +48,7 @@ export default function Page() {
 
       <div className="flex flex-col my-4  gap-3 mb-6">
         <Link className="hover:text-red-700 underline text-white" href="/acnd-exhibition/apply">Apply for a booth at the next ACND Exhibition</Link>
-        <Link className="hover:text-red-700 underline text-white" href="">Follow ACND on Instagram</Link>
+        <Link className="hover:text-red-700 underline text-white" href="https://www.instagram.com/acnd.exhibition/" target="_blank">Follow ACND on Instagram</Link>
       </div>
 
       <h2 className=" text-xl font-sans uppercase">ACND 2024</h2>
