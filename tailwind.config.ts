@@ -18,6 +18,10 @@ const config: Config = {
         sans: ["var(--font-montserrat)", "system-ui", "sans-serif"],
       },
       keyframes: {
+        swipe: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(20px)" },
+        },
         stretchin: {
           "0%": {
             transform: "scaleX(0)",
@@ -60,6 +64,7 @@ const config: Config = {
         },
       },
       animation: {
+        swipe: "swipe 1.5s cubic-bezier(0.25, 0.8, 0.5, 1) infinite",
         slideIn: "slideIn 0.3s ease-out",
         stretchin:
           "stretchin var(--stretchin-duration) ease-in-out var(--stretchin-delay, 0) forwards",

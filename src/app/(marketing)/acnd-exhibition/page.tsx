@@ -22,7 +22,6 @@ const IMAGES = [
   { src: "/images/acnd/acnd-12.webp" },
   { src: "/images/acnd/acnd-1.webp" },
   { src: "/images/acnd/acnd-13.webp" },
-  { src: "/images/acnd/acnd-14.webp" },
 ];
 
 export default function Page() {

@@ -4,12 +4,12 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
-import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useState } from "react";
 
 import Image from "next/image";
+import { Pagination } from "swiper/modules";
 import { cn } from "@/lib/utils";
-import { useEffect } from "react";
 
 // Preload images
 const preloadImages = (images: { src: string }[]) => {
@@ -20,9 +20,15 @@ const preloadImages = (images: { src: string }[]) => {
 };
 
 export const ImageSlider = ({ className, images }: { className?: string, images: any[] }) => {
+  const [showAnimation, setShowAnimation] = useState(true);
+
   useEffect(() => {
     preloadImages(images); // Preload all images on component mount
-  }, []);
+    const timer = setTimeout(() => {
+      setShowAnimation(false); // Disable animation after 3 seconds
+    }, 3000);
+    return () => clearTimeout(timer); // Cleanup timer
+  }, [images]);
 
   return (
     <Swiper
@@ -31,10 +37,6 @@ export const ImageSlider = ({ className, images }: { className?: string, images:
       loop={true}
       pagination={{
         clickable: true,
-      }}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
       }}
       breakpoints={{
         "@0.00": {
@@ -50,8 +52,10 @@ export const ImageSlider = ({ className, images }: { className?: string, images:
           spaceBetween: 10,
         },
       }}
-      modules={[Pagination, Autoplay]}
-      className={cn("relative", className)}
+      modules={[Pagination]}
+      className={cn("relative", className, {
+        "animate-swipe": showAnimation,
+      })}
       style={{
         "--swiper-pagination-bullet-border-radius": "0",
         "--swiper-pagination-bullet-height": "4px",
@@ -60,11 +64,14 @@ export const ImageSlider = ({ className, images }: { className?: string, images:
       } as React.CSSProperties}
     >
       {images?.map((image, index) => (
-        <SwiperSlide key={index}>
-          <div className="relative w-full h-[300px]">
+        <SwiperSlide
+          key={index}
+          className={cn("relative w-full aspect-[2450/3673]")}
+        >
+          <div className="relative w-full aspect-[2450/3673]">
             <Image
               src={image.src}
-              className="relative object-cover inset-0"
+              className="relative object-contain inset-0"
               fill
               alt="placeholder"
             />
@@ -74,4 +81,3 @@ export const ImageSlider = ({ className, images }: { className?: string, images:
     </Swiper>
   );
 };
-
