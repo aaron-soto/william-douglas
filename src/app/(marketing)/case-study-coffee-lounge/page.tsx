@@ -13,7 +13,6 @@ const IMAGES = [
   { src: "/images/case-study/case-study-2.jpg" },
   { src: "/images/case-study/case-study-3.jpg" },
   { src: "/images/case-study/case-study-4.jpg" },
-  { src: "/images/case-study/case-study-5.jpg" },
   { src: "/images/case-study/case-study-6.jpg" },
   { src: "/images/case-study/case-study-7.jpg" },
   { src: "/images/case-study/case-study-8.jpg" },

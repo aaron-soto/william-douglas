@@ -42,15 +42,15 @@ export default function Page() {
   return (
     <div className="py-6 px-4 text-white flex flex-col">
       <h1 className="text-3xl text-white">Contact</h1>
-      <h2
-        className={cn(firaSans.className, "font-medium text-xl uppercase mt-6")}
-      >
-        William Douglas
-      </h2>
-      <Link href="/" className="text-red-700">
-        williamdouglas@email.com
+
+      <p className="mt-6 mb-4">
+        If you have any questions or would like to get in touch, please feel
+        free to contact us at our emails or via the form.
+      </p>
+      <Link href="mailto:william@williamdouglasco.com" className="text-red-700">
+        william@williamdouglasco.com
       </Link>
-      <p className="mt-6">
+      {/* <p className="mt-6">
         If you have any questions or would like to get in touch, please feel
         free to contact us at our emails or via the form.
       </p>
@@ -92,7 +92,7 @@ export default function Page() {
         >
           Send
         </Button>
-      </form>
+      </form> */}
     </div>
   );
 }

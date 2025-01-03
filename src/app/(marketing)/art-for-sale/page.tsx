@@ -1,4 +1,5 @@
-import { ART_FOR_SALE } from "@/data/art-for-sale";
+import { ART_FOR_SALE } from "./data";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -14,22 +15,66 @@ export default function Page() {
       <p>
         These are current pieces in stock and available for purchase. Some of the pieces are created by W. Douglas, and some are from our art exhibition ACND.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+      <div className="flex flex-col gap-24 md:gap-8 mt-12">
         {ART_FOR_SALE.map((art, idx) => {
           return (
-            <Link
-              href={`/art-for-sale/${art.slug}`}
+            <div
               key={idx}
-              className="col-span-1 h-[300px] overflow-hidden flex items-center justify-center"
+              className="overflow-hidden flex flex-col md:flex-row gap-6"
             >
-              <Image
-                src={art.image}
-                width={500}
-                height={500}
-                alt="img"
-                className="object-cover cursor-pointer hover:scale-110 transition-all duration-300"
-              />
-            </Link>
+              <div className="overflow-hidden">
+                <Link href={`/art-for-sale/${art.slug}`}>
+                  <Image
+                    src={art.image}
+                    width={300}
+                    height={500}
+                    alt="img"
+                    className="object-cover cursor-pointer hover:scale-110 transition-all duration-300 mx-auto"
+                  />
+                </Link>
+              </div>
+              <div className="flex flex-col flex-1">
+                <p>
+                  <span className="text-muted-foreground">Name:</span> {art.name}
+                </p>
+                <p>
+                  <span className="text-muted-foreground">Artist:</span>
+                  <Link href={art.artistLink} target="_blank" className="underline text-primary">
+                    {art.artist}
+                  </Link>
+                </p>
+                <p>
+                  <span className="text-muted-foreground">Price:</span> ${art.price}
+                </p>
+
+                <p>
+                  <span className="text-muted-foreground">Dimensions:</span> {art.dimensions}
+                </p>
+
+                <p>
+                  <span className="text-muted-foreground">Features:</span>{" "}
+                  {art.features.map((feature, idx) => (
+                    <span key={idx}>
+                      {feature}
+                      {idx !== art.features.length - 1 && ", "}
+                    </span>
+                  ))}
+                </p>
+
+                <p>
+                  <span className="text-muted-foreground">Description:</span> {art.description}
+                </p>
+
+                <div className="mt-6">
+                  <Button size="lg" className="w-full md:w-fit" asChild>
+                    <Link href={`/art-for-sale/${art.slug}`}>
+                      Contact For Details
+                    </Link>
+                  </Button>
+
+                </div>
+              </div>
+            </div>
           );
         })}
       </div>

@@ -53,7 +53,7 @@ export const ImageSlider = ({ className, images }: { className?: string, images:
         },
       }}
       modules={[Pagination]}
-      className={cn("relative", className, {
+      className={cn("relative", className, "", {
         "animate-swipe": showAnimation,
       })}
       style={{

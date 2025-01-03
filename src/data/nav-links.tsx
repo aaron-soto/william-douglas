@@ -48,10 +48,6 @@ export const NAV_LINKS: NavLink[] = [
         label: "William Douglas Co. Youtube",
         href: "/william-douglas-co-youtube",
       },
-      {
-        label: "Prints",
-        href: "/prints",
-      },
     ],
   },
   {
