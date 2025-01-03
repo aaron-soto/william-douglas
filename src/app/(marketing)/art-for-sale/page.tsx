@@ -15,6 +15,11 @@ export default function Page() {
       <p>
         These are current pieces in stock and available for purchase. Some of the pieces are created by W. Douglas, and some are from our art exhibition ACND.
       </p>
+
+      <p className="text-muted-foreground mt-3">
+        Local Pickup only, please contact us for more information.
+      </p>
+
       <div className="flex flex-col gap-24 md:gap-8 mt-12">
         {ART_FOR_SALE.map((art, idx) => {
           return (
