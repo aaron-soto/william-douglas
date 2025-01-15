@@ -13,6 +13,18 @@ export interface ArtForSale {
 
 export const ART_FOR_SALE: ArtForSale[] = [
   {
+    id: "ee17afa8-5fc0-4056-a19d-f5877b3e913a",
+    name: "Valet",
+    slug: "valet",
+    artist: "William Douglas",
+    artistLink: "https://www.instagram.com/williamdouglas.co/",
+    description: "A place for everything and everything in its place",
+    image: "/images/art/valet.jpg",
+    features: ["Walnut", "White Oak", "Brass"],
+    dimensions: `69" x 19" x 85.5"`,
+    price: 30000,
+  },
+  {
     id: "c5d58e3d-fe5f-4790-ad61-0753727d02df",
     name: "Always On Time",
     slug: "always-on-time",
@@ -35,18 +47,6 @@ export const ART_FOR_SALE: ArtForSale[] = [
     features: ["White Oak", "Walnut", "Danish Cord"],
     dimensions: `60" x 16" x 18"`,
     price: 4600,
-  },
-  {
-    id: "ee17afa8-5fc0-4056-a19d-f5877b3e913a",
-    name: "Valet",
-    slug: "valet",
-    artist: "William Douglas",
-    artistLink: "https://www.instagram.com/williamdouglas.co/",
-    description: "A place for everything and everything in its place",
-    image: "/images/art/valet.jpg",
-    features: ["Walnut", "White Oak", "Brass"],
-    dimensions: `69" x 19" x 85.5"`,
-    price: 8000,
   },
   {
     id: "2969507b-7d4d-4613-b88e-27ce1fa61248",
