@@ -25,6 +25,18 @@ export const ART_FOR_SALE: ArtForSale[] = [
     price: 30000,
   },
   {
+    id: "ee17cba8-5fc0-4766-a19d-f5834b3e913a",
+    name: "Desert Bed Cactus",
+    slug: "desert-bed-cactus",
+    artist: "William Douglas",
+    artistLink: "https://www.instagram.com/williamdouglas.co/",
+    description: "A desert inspired sculpture",
+    image: "/images/art/cactus.webp",
+    features: ["Copper Plated Base", "Maple Cactus"],
+    dimensions: `12" x 36"`,
+    price: 1200,
+  },
+  {
     id: "c5d58e3d-fe5f-4790-ad61-0753727d02df",
     name: "Always On Time",
     slug: "always-on-time",

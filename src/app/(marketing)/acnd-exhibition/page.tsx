@@ -37,6 +37,10 @@ export default function Page() {
         className="my-4"
       />
 
+      <p className="text-xl font-semibold py-2">
+        Next Date: November 1st-2nd 2025
+      </p>
+
       <p className="text-muted-foreground mt-3">
         The ACND Art Exhibition was created to bridge the gap between serious
         artists, makers, and craftspeople and their ideal clients and customers.
@@ -67,7 +71,13 @@ export default function Page() {
       </p>
 
       <div className="flex flex-col my-4  gap-3 mb-6">
-        <div className="flex items-center gap-2">
+        <Link
+          className="hover:text-red-700 underline text-white"
+          href="/acnd-exhibition/apply"
+        >
+          ACND Fall 2025 Application
+        </Link>
+        {/* <div className="flex items-center gap-2">
           <Link
             className="text-neutral-500 line-through pointer-events-none"
             href="/acnd-exhibition/apply"
@@ -77,13 +87,7 @@ export default function Page() {
           <span className="text-sm -translate-y-2 -rotate-3 -translate-x-4">
             Sold Out
           </span>
-        </div>
-        <Link
-          className="hover:text-red-700 underline text-white"
-          href="/acnd-exhibition/waitlist"
-        >
-          Join Waitlist for Fall 2025 ACND
-        </Link>
+        </div> */}
         <Link
           className="hover:text-red-700 underline text-white"
           href="https://www.instagram.com/acnd.exhibition/"
