@@ -9,6 +9,7 @@ export interface ArtForSale {
   features: string[];
   dimensions: string;
   price: number;
+  sold?: boolean;
 }
 
 export const ART_FOR_SALE: ArtForSale[] = [
@@ -35,6 +36,7 @@ export const ART_FOR_SALE: ArtForSale[] = [
     features: ["Copper Plated Base", "Maple Cactus"],
     dimensions: `12" x 36"`,
     price: 1200,
+    sold: true,
   },
   {
     id: "c5d58e3d-fe5f-4790-ad61-0753727d02df",

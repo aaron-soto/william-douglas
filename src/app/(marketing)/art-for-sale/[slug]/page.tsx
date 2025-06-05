@@ -15,7 +15,14 @@ export default function Page({ params }: { params: { slug: string } }) {
     <div className="py-6 px-4 text-white">
       <h1 className="font-sans uppercase text-3xl">{artPiece.name}</h1>
       <p className="text-muted-foreground mt-3">{artPiece.description}</p>
-      <div className=" mt-6">
+      <div className="relative mt-6">
+        {artPiece.sold && (
+          <div className="absolute">
+            <span className="bg-primary  text-white px-4 py-2 text-center font-semibold absolute top-8 z-50">
+              SOLD
+            </span>
+          </div>
+        )}
         <Image
           src={artPiece.image}
           alt="art"
@@ -41,11 +48,16 @@ export default function Page({ params }: { params: { slug: string } }) {
           </li>
           <li>
             Dimensions:
-            <span className="text-muted-foreground"> {artPiece.dimensions}</span>
+            <span className="text-muted-foreground">
+              {" "}
+              {artPiece.dimensions}
+            </span>
           </li>
           <li>
-            Artist:{' '}
-            <Link href={artPiece.artistLink} className="underline text-primary">{artPiece.artist}</Link>
+            Artist:{" "}
+            <Link href={artPiece.artistLink} className="underline text-primary">
+              {artPiece.artist}
+            </Link>
           </li>
           <li>
             Price:
@@ -83,28 +95,29 @@ export default function Page({ params }: { params: { slug: string } }) {
                 </div>
                 <div className="flex flex-col md:flex-1 max-w-[300px]">
                   <p>
-                    <span className="text-muted-foreground">Name:</span> {art.name}
+                    <span className="text-muted-foreground">Name:</span>{" "}
+                    {art.name}
                   </p>
                   <p>
-                    <span className="text-muted-foreground">Artist:</span> {art.artist}
+                    <span className="text-muted-foreground">Artist:</span>{" "}
+                    {art.artist}
                   </p>
                   <p>
-                    <span className="text-muted-foreground">Price:</span> ${art.price}
+                    <span className="text-muted-foreground">Price:</span> $
+                    {art.price}
                   </p>
                   <p>
-                    <span className="text-muted-foreground">Dimensions:</span> {art.dimensions}
+                    <span className="text-muted-foreground">Dimensions:</span>{" "}
+                    {art.dimensions}
                   </p>
                   <Button className="mt-4 w-full" asChild>
-                    <Link href={`/art-for-sale/${art.slug}`}>
-                      View Details
-                    </Link>
+                    <Link href={`/art-for-sale/${art.slug}`}>View Details</Link>
                   </Button>
                 </div>
               </div>
             );
           })}
         </div>
-
       </div>
     </div>
   );
