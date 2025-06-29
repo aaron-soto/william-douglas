@@ -58,6 +58,10 @@ export const NAV_LINKS: NavLink[] = [
         href: "/best-of-the-valley-2024",
       },
       {
+        label: "Best of the Valley 2025",
+        href: "/best-of-the-valley-2025",
+      },
+      {
         label: "Fine Woodworking Magazine 2023",
         href: "/fine-woodworking-magazine-2023",
       },
@@ -99,10 +103,7 @@ export const SOCIALS = [
   },
 ];
 
-export const SOCIALS_MAP = SOCIALS.reduce<Record<string, Social>>(
-  (map, social) => {
-    map[social.label] = social;
-    return map;
-  },
-  {}
-);
+export const SOCIALS_MAP = SOCIALS.reduce<Record<string, Social>>((map, social) => {
+  map[social.label] = social;
+  return map;
+}, {});

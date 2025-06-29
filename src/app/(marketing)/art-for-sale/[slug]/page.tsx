@@ -23,13 +23,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             </span>
           </div>
         )}
-        <Image
-          src={artPiece.image}
-          alt="art"
-          width={500}
-          height={600}
-          className="object-cover"
-        />
+        <Image src={artPiece.image} alt="art" width={500} height={600} className="object-cover" />
       </div>
 
       <div className="mt-6">
@@ -48,10 +42,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           </li>
           <li>
             Dimensions:
-            <span className="text-muted-foreground">
-              {" "}
-              {artPiece.dimensions}
-            </span>
+            <span className="text-muted-foreground"> {artPiece.dimensions}</span>
           </li>
           <li>
             Artist:{" "}
@@ -67,9 +58,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       </div>
 
       <Button size="lg" className="mt-6 w-full md:w-fit" asChild>
-        <Link href="mailto:william@williamdouglasco.com">
-          Contact For Details
-        </Link>
+        <Link href="mailto:william@williamdouglasco.com">Contact For Details</Link>
       </Button>
 
       {/* Other art pieces */}
@@ -95,20 +84,16 @@ export default function Page({ params }: { params: { slug: string } }) {
                 </div>
                 <div className="flex flex-col md:flex-1 max-w-[300px]">
                   <p>
-                    <span className="text-muted-foreground">Name:</span>{" "}
-                    {art.name}
+                    <span className="text-muted-foreground">Name:</span> {art.name}
                   </p>
                   <p>
-                    <span className="text-muted-foreground">Artist:</span>{" "}
-                    {art.artist}
+                    <span className="text-muted-foreground">Artist:</span> {art.artist}
                   </p>
                   <p>
-                    <span className="text-muted-foreground">Price:</span> $
-                    {art.price}
+                    <span className="text-muted-foreground">Price:</span> ${art.price}
                   </p>
                   <p>
-                    <span className="text-muted-foreground">Dimensions:</span>{" "}
-                    {art.dimensions}
+                    <span className="text-muted-foreground">Dimensions:</span> {art.dimensions}
                   </p>
                   <Button className="mt-4 w-full" asChild>
                     <Link href={`/art-for-sale/${art.slug}`}>View Details</Link>
